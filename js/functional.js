@@ -70,4 +70,11 @@ console.table(yearsLived);
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-  
+    const newData = data.reduce((obj, item) => {
+        if(!obj[item]) {
+            obj[item] = 0; // to set the initial one to zero
+        }
+        obj[item]++;
+        return obj;
+    }, {}); //start with a blank object
+    console.log(newData);
