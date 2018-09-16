@@ -36,3 +36,15 @@ const inventors = [
     
     const ordered2 = inventors.sort((a, b) => a.year < b.year ? 1 : -1);
     console.table(ordered2);
+
+    // Array.prototype.reduce()
+    // 4. How many years did all the inventors live?
+    // 5. Sort the inventors by years lived
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // 7. sort Exercise
+    // Sort the people alphabetically by last name
+    // 8. Reduce Exercise
+    // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+  
