@@ -79,7 +79,7 @@ console.table(yearsLived);
     }, {}); //start with a blank object
     console.log(newData);
 
-    const people = [
+    const folks = [
         { name: 'Wes', year: 1988 },
         { name: 'Kait', year: 1986 },
         { name: 'Irv', year: 1970 },
@@ -94,6 +94,10 @@ console.table(yearsLived);
       ];
       // Some and Every Checks
       // Array.prototype.some() // is at least one person 19 or older?
+      const adults = folks.some(function(folk) {
+            return 2018 - folk.year >= 19 ? true : false;
+      });
+      console.log({adults});
       // Array.prototype.every() // is everyone 19 or older?
       // Array.prototype.find()
       // Find is like filter, but instead returns just the one you are looking for
