@@ -94,9 +94,7 @@ console.table(yearsLived);
       ];
       // Some and Every Checks
       // Array.prototype.some() // is at least one person 19 or older?
-      const adults = folks.some(function(folk) {
-            return 2018 - folk.year >= 19 ? true : false;
-      });
+      const adults = folks.some(folk => ((new Date()).getFullYear()) - folk.year >= 19);
       console.log({adults});
       // Array.prototype.every() // is everyone 19 or older?
       // Array.prototype.find()
