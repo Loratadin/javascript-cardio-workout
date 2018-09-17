@@ -97,13 +97,15 @@ console.table(yearsLived);
       const adults = folks.some(folk => ((new Date()).getFullYear()) - folk.year >= 19);
       console.log({adults});
       // Array.prototype.every() // is everyone 19 or older?
-      const isEvery = folks.every(folk => {
+      const isEvery = folks.every(folk => { //we run a function against it which will give us a folk
           return 2018 - folk.year >= 19;
       });
       console.log({isEvery});
       // Array.prototype.find()
       // Find is like filter, but instead returns just the one you are looking for
       // find the comment with the ID of 823423
+      const targetComment = comments.find(comment => comment.id === 823423); //we run a function against it which will give us a comment
+      console.log({targetComment});
       // Array.prototype.findIndex()
       // Find the comment with this ID
       // delete the comment with the ID of 823423
