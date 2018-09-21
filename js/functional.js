@@ -118,6 +118,13 @@ console.table(yearsLived);
 
       //key SEQUENCE detection
       const pressed = [];
+      const secretCode = 'tania';
       window.addEventListener('keyup', (e) => {
           console.log(e.key);
+          pressed.push(e.key);
+          if(pressed.join("").includes(secretCode)) {
+              console.log('BINGO!!!');
+              cornify_add();
+          }
+          console.log(pressed);
       })
