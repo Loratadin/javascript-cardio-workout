@@ -113,3 +113,11 @@ console.table(yearsLived);
       console.log(index);
       comments.splice(index, 1);
       console.table(comments);
+
+      console.clear();
+
+      //key SEQUENCE detection
+      const pressed = [];
+      window.addEventListener('keyup', (e) => {
+          console.log(e.key);
+      })
