@@ -145,3 +145,10 @@ console.table(yearsLived);
           return reverseWord === str;
       }
       console.log(palindrome("madam"));
+      // closure
+      let a = 1;
+      let addTo = function() {
+          let b = 2;
+          return a + b;
+      };
+      console.dir(addTo);
