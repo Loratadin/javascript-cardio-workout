@@ -152,3 +152,16 @@ console.table(yearsLived);
           return a + b;
       };
       console.dir(addTo);
+      //closure 2
+      let bedroom = function(passed) {
+            let home = function(inner) {
+                return passed + inner;
+            };
+            return home;
+      }
+
+      let buyForBedroom = new bedroom('pillow');
+      let buyForHome = new bedroom('chair');
+
+      console.log(buyForBedroom('lamp'));
+      console.log(buyForHome('carpet'));
