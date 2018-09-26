@@ -160,8 +160,8 @@ console.table(yearsLived);
             return home;
       }
 
-      let buyForBedroom = new bedroom('pillow');
-      let buyForHome = new bedroom('chair');
+      let buyForBedroom = new bedroom('pillow, ');
+      let buyForHome = new bedroom('chair, ');
 
-      console.log(buyForBedroom('lamp'));
-      console.log(buyForHome('carpet'));
+      console.log(buyForBedroom(' lamp'));
+      console.log(buyForHome(' carpet'));
