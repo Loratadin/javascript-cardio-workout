@@ -135,6 +135,7 @@ console.table(yearsLived);
       age = 200;
       console.log(age, age2);
 
+      console.clear();
       //Palindrome
       function palindrome(str) {
           let reverseWord = "";
@@ -143,4 +144,4 @@ console.table(yearsLived);
           }
           return reverseWord === str;
       }
-      console.log(madam);
+      console.log(palindrome("madam"));
