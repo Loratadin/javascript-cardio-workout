@@ -165,3 +165,24 @@ console.table(yearsLived);
 
       console.log(buyForMe(' lamp'));
       console.log(buyForYou(' carpet'));
+      // Promise
+      let myPromise = new Promise((resolve, reject) => {
+        resolve('Bingo!');
+      })
+
+
+      function fetch() {
+          return new Promise((resolve, reject) => {
+            resolve('Bingo!');
+          });
+      }
+
+
+      myPromise.then((data) => {console.log(data);})
+      //
+      let myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve('Bingo!')
+        }, 5000);
+      })
+      myPromise.then((data) => {console.log(data);})
