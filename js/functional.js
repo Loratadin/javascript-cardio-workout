@@ -206,3 +206,14 @@ console.table(yearsLived);
     } else {
         console.log('false');
     }
+
+    let oldObject = {
+        name: 'Tania',
+        surname: 'Ta',
+        address: 'Willy Street'
+    }
+
+    let newObject = Object.create(oldObject);
+    newObject.name = 'Sergey';
+    console.log(newObject);
+    console.log(oldObject.__proto__);
