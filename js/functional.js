@@ -198,3 +198,11 @@ console.table(yearsLived);
             console.log('Number is 8');
             break;
     }
+
+    let aa = 2.2;
+    let bb = 1.3;
+    if ((aa * bb).toFixed(2) == 2.86) {
+        console.log('true');
+    } else {
+        console.log('false');
+    }
