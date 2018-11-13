@@ -178,11 +178,23 @@ console.table(yearsLived);
       }
 
 
-      myPromise.then((data) => {console.log(data);})
-      //
-      let myPromise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve('Bingo!')
-        }, 5000);
-      })
-      myPromise.then((data) => {console.log(data);})
+    //   myPromise.then((data) => {console.log(data);})
+    //   let myPromise = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve('Bingo!')
+    //     }, 5000);
+    //   })
+    //   myPromise.then((data) => {console.log(data);})
+
+    let luckyNumber = 7;
+    switch (luckyNumber) {
+        case 1:
+            console.log("Number is 1");
+            break;
+        case 3:
+            console.log('Number is 3');
+            break;
+        default:
+            console.log('Number is 8');
+            break;
+    }
