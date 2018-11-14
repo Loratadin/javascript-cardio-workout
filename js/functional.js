@@ -218,22 +218,31 @@ console.table(yearsLived);
     console.log(newObject);
     console.log(oldObject.__proto__);
 
+    console.clear();
 //Debugging 
-var a = 2;
-var b = 5;
-var c;
-var d = 1000;
+// var aaa = 2;
+// var b = 5;
+// var c;
+// var d = 1000;
 
-for (var i = 0; i < 5; i++) {
-    if (i > a && i < b) {
-        c = 1000;
-    }
-    if (i === 3) {
-        d *= 2;
-    }
-}
+// for (var i = 0; i < 5; i++) {
+//     if (i > aaa && i < b) {
+//         c = 1000;
+//     }
+//     if (i === 3) {
+//         d *= 2;
+//     }
+// }
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
+// console.log(aaa);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+//Build-in functions
+const keepDoing = setInterval(function() {
+    console.log("Keep doing!")
+}, 500);
+setTimeout(function() {
+    clearInterval(keepDoing);
+}, 2500);
