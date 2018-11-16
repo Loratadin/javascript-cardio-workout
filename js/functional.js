@@ -246,3 +246,11 @@ const keepDoing = setInterval(function() {
 setTimeout(function() {
     clearInterval(keepDoing);
 }, 2500);
+
+//events
+let inner = document.querySelector('#inner');
+inner.addEventListener('click', innerListener);
+
+function innerListener(event) {
+    console.log('Clicked inner!');
+}
