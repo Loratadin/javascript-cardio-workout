@@ -249,8 +249,13 @@ setTimeout(function() {
 
 //events
 let inner = document.querySelector('#inner');
+let outer = document.querySelector('#outer');
 inner.addEventListener('click', innerListener);
+outer.addEventListener('click', outerListener);
 
 function innerListener(event) {
     console.log('Clicked inner!');
+}
+function outerListener(event) {
+    console.log('Clicked outer!');
 }
