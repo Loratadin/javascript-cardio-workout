@@ -251,10 +251,10 @@ console.table(yearsLived);
 let inner = document.querySelector('#inner');
 let outer = document.querySelector('#outer');
 inner.addEventListener('click', innerListener);
-outer.addEventListener('click', outerListener);
+outer.addEventListener('click', outerListener, true); // true adds priority
 
 function innerListener(event) {
-    console.log(event.bubbles);
+    // console.log(event.bubbles);
     event.stopPropagation();
     console.log('Clicked inner!');
 }
