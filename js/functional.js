@@ -240,12 +240,12 @@ console.table(yearsLived);
 // console.log(d);
 
 //Build-in functions
-const keepDoing = setInterval(function() {
-    console.log("Keep doing!")
-}, 500);
-setTimeout(function() {
-    clearInterval(keepDoing);
-}, 2500);
+// const keepDoing = setInterval(function() {
+//     console.log("Keep doing!")
+// }, 500);
+// setTimeout(function() {
+//     clearInterval(keepDoing);
+// }, 2500);
 
 //events
 let inner = document.querySelector('#inner');
@@ -254,6 +254,8 @@ inner.addEventListener('click', innerListener);
 outer.addEventListener('click', outerListener);
 
 function innerListener(event) {
+    console.log(event.bubbles);
+    event.stopPropagation();
     console.log('Clicked inner!');
 }
 function outerListener(event) {
