@@ -261,3 +261,9 @@ function innerListener(event) {
 function outerListener(event) {
     console.log('Clicked outer!');
 }
+console.clear();
+
+let showWindow = () => {
+    console.log(this);
+}
+showWindow();
