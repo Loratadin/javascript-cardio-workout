@@ -263,7 +263,14 @@ function outerListener(event) {
 }
 console.clear();
 
-let showWindow = () => {
+let showWindow = (event) => {
     console.log(this);
 }
 showWindow();
+
+console.clear;
+
+function isEqualTo(number, compare) {
+    return number == compare;
+}
+console.log(isEqualTo(10, 10));
