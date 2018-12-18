@@ -285,3 +285,8 @@ function sumUp(...toAdd) {
     return result;
 }
 console.log(sumUp(100, 20, 10));
+
+// Spread Operator
+let numbers = [1, 2, 3, 4, 5];
+console.log(...numbers);
+console.log(Math.max(...numbers));
