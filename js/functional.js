@@ -290,3 +290,9 @@ console.log(sumUp(100, 20, 10));
 let numbers = [1, 2, 3, 4, 5];
 console.log(...numbers);
 console.log(Math.max(...numbers));
+
+// for-of loop
+let testResults = [1.23, 1.10, 4.1];
+for (let testResult of testResults) {
+    console.log(testResult);
+}
