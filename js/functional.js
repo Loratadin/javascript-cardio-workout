@@ -308,7 +308,11 @@ console.log(secondB);
 let myNewObject = {
     hisName: "Jer",
     hisAge: 5,
-}
-let { hisName, hisAge } = myNewObject;
-console.log(hisName, hisAge);
+    hisGreed: function () {
+        console.log("Rrraph");
+    }
+};
+let { hisName, hisGreed: hi } = myNewObject;
+console.log(hisName);
+hi();
 
