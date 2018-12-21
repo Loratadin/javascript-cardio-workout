@@ -303,3 +303,12 @@ let myNumbers = [1, 2, 3];
 let [firstA, secondB] = myNumbers;
 console.log(firstA);
 console.log(secondB);
+
+//destructure objects
+let myNewObject = {
+    hisName: "Jer",
+    hisAge: 5,
+}
+let { hisName, hisAge } = myNewObject;
+console.log(hisName, hisAge);
+
