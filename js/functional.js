@@ -296,3 +296,10 @@ let testResults = [1.23, 1.10, 4.1];
 for (let testResult of testResults) {
     console.log(testResult);
 }
+console.clear
+
+//destructuring - arrays
+let myNumbers = [1, 2, 3];
+let [firstA, secondB] = myNumbers;
+console.log(firstA);
+console.log(secondB);
