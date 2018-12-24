@@ -316,3 +316,8 @@ let { hisName, hisGreed: hi } = myNewObject;
 console.log(hisName);
 hi();
 
+//ES6 Symbols
+let symbol1 = Symbol.for('age');
+let symbol2 = Symbol.for('age');
+console.log(symbol1 == symbol2);
+
