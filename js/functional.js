@@ -343,3 +343,13 @@ let myObjectForIteration = {
 for (let hobby of myObjectForIteration) {
     console.log(hobby);
 }
+
+//generator 
+function *select() {
+    yield 'House';
+    yield 'Garage';
+}
+let it = select();
+console.log(it.next());
+console.log(it.next());
+console.log(it.next());
