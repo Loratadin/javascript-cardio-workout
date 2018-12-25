@@ -321,3 +321,25 @@ let symbol1 = Symbol.for('age');
 let symbol2 = Symbol.for('age');
 console.log(symbol1 == symbol2);
 
+//Iterator 
+let myObjectForIteration = {
+    hobbies: ['Sports', 'Cooking'],
+    [Symbol.iterator]: function () {
+        let w = 0;
+        let hobbies = this.hobbies;
+        return {
+            next: function () {
+                let myValue = hobbies[w];
+                w++;
+                return {
+                    done: w > hobbies.length ? true : false,
+                    value: myValue
+                };
+            }
+        };
+    }
+};
+
+for (let hobby of myObjectForIteration) {
+    console.log(hobby);
+}
