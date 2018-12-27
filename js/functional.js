@@ -353,3 +353,21 @@ let it = select();
 console.log(it.next());
 console.log(it.next());
 console.log(it.next());
+
+console.clear();
+//controll generator with return
+function *gen(end) {
+    for (let m = 0; m < end; m++) {
+        try {
+            yield m;
+        } catch (e) {
+            console.log(e);
+        }
+    }
+}
+let thisThing = gen(2);
+
+console.log(thisThing.next());
+console.log(thisThing.return('Oops, small error!'));
+console.log(thisThing.next());
+console.log(thisThing.next());
