@@ -371,3 +371,14 @@ console.log(thisThing.next());
 console.log(thisThing.return('Oops, small error!'));
 console.log(thisThing.next());
 console.log(thisThing.next());
+
+//promise
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve('Done as promissed!');
+    }, 1500);
+});
+
+promise.then(function (value) {
+    console.log(value);
+});
