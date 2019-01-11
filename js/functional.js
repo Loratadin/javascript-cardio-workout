@@ -386,15 +386,22 @@ promise.then(function (value) {
 // chain promises
 function waitASecond(seconds) {
     return new Promise(function (resolve, reject) {
-        setTimeout(function () {
-            seconds++;
-            resolve(seconds);
-        }, 1000);
+        if (seconds > 2) {
+            reject("Rejected!");
+        } else {
+            setTimeout(function () {
+                seconds++;
+                resolve(seconds);
+            }, 1000);
+        }
     });
 }
 
-waitASecond(0)
+waitASecond(2)
     .then(waitASecond)
     .then(function (seconds) {
         console.log(seconds);
     })
+    .catch(function (error) {
+        console.log(error);
+    });
