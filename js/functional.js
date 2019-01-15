@@ -426,3 +426,13 @@ Promise.race([promise1, promise2])
     .catch(function (error) {
         console.log(error);
     });
+
+// The Object
+var myLibrary1 = {
+    books: 1
+}
+var myLibrary2 = {
+    stories: 2
+}
+var library = Object.assign(myLibrary1, myLibrary2);
+console.log(library);
