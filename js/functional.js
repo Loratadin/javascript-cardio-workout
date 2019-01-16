@@ -435,11 +435,22 @@ var myLibrary2 = {
     stories: 2
 }
 var library = Object.assign(myLibrary1, myLibrary2);
-console.log(library);
 
 // Strings
 let myNewThing = "Variable";
 console.log("starts", myNewThing.startsWith("Var"));
 console.log("ends", myNewThing.endsWith("le"));
 console.log("includes",myNewThing.includes("iabl"));
+
+console.clear();
+// Map
+let cardAce = {
+    name: "Ace of Spades"
+};
+let cardKing = {
+    name: "King of Clubs"
+};
+let deck = new Map();
+deck.set("as", cardAce);
+deck.set('kc', cardKing);
 
