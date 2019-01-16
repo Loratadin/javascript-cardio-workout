@@ -427,7 +427,7 @@ Promise.race([promise1, promise2])
         console.log(error);
     });
 
-// The Object
+// Merge Object
 var myLibrary1 = {
     books: 1
 }
@@ -436,3 +436,10 @@ var myLibrary2 = {
 }
 var library = Object.assign(myLibrary1, myLibrary2);
 console.log(library);
+
+// Strings
+let myNewThing = "Variable";
+console.log("starts", myNewThing.startsWith("Var"));
+console.log("ends", myNewThing.endsWith("le"));
+console.log("includes",myNewThing.includes("iabl"));
+
