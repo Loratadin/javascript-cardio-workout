@@ -33,7 +33,7 @@ const inventors = [
         }
     });
     console.table(ordered);
-    
+
     const ordered2 = inventors.sort((a, b) => a.year < b.year ? 1 : -1);
     console.table(ordered2);
 
@@ -129,7 +129,7 @@ console.table(yearsLived);
           console.log(pressed);
       })
       //Reference
-      let age = 100; 
+      let age = 100;
       let age2 = age;
       console.log(age, age2);
       age = 200;
@@ -219,7 +219,7 @@ console.table(yearsLived);
     console.log(oldObject.__proto__);
 
     console.clear();
-//Debugging 
+//Debugging
 // var aaa = 2;
 // var b = 5;
 // var c;
@@ -321,7 +321,7 @@ let symbol1 = Symbol.for('age');
 let symbol2 = Symbol.for('age');
 console.log(symbol1 == symbol2);
 
-//Iterator 
+//Iterator
 let myObjectForIteration = {
     hobbies: ['Sports', 'Cooking'],
     [Symbol.iterator]: function () {
@@ -344,7 +344,7 @@ for (let hobby of myObjectForIteration) {
     console.log(hobby);
 }
 
-//generator 
+//generator
 function *select() {
     yield 'House';
     yield 'Garage';
@@ -456,10 +456,29 @@ deck.set('kc', cardKing);
 
 // Set
 let set = new Set([1, 1, 1]);
- 
+
 set.add(2);
 set.delete(1);
 
 for (element of set) {
     console.log(element);
 }
+
+console.clear();
+
+function reverseAString(string) {
+    // return string.split('').reverse().join('');
+    ////////////
+    // let result = "",
+    // for (i = string.length - 1; i >= 0; i--) {
+    //     result = result + string[i];
+    // }
+    // return result;
+    ////////////
+    let result = "",
+    for (let char of string) {
+        result = char + result;
+    }
+    return result;
+}
+console.log(reverseAString("congratulations"));
