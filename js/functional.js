@@ -491,3 +491,15 @@ function reverseAString(string) {
 
 }
 console.log(reverseAString("congratulations"));
+
+console.clear();
+
+// Remove duplicates and sort an array
+function removeDuplicatesAndSort(array) {
+    let result = array.filter((value, index, arr) => {
+        return index === arr.indexOf(value)
+    })
+    result.sort();
+    return result;
+}
+console.log(removeDuplicatesAndSort([6, 8, 1, 4, 1, 4]))
