@@ -468,17 +468,26 @@ console.clear();
 
 function reverseAString(string) {
     // return string.split('').reverse().join('');
+
     ////////////
+
     // let result = "",
     // for (i = string.length - 1; i >= 0; i--) {
     //     result = result + string[i];
     // }
     // return result;
+
     ////////////
-    let result = "",
-    for (let char of string) {
-        result = char + result;
-    }
-    return result;
+
+    // let result = "";
+    // for(let char of string) {
+    //     result = char + result;
+    // }
+    // return result;
+
+    /////////////
+
+    return string.split('').reduce((reversed, character) => character + reversed, '');
+
 }
 console.log(reverseAString("congratulations"));
