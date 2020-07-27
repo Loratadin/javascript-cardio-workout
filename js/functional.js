@@ -496,10 +496,26 @@ console.clear();
 
 // Remove duplicates and sort an array
 function removeDuplicatesAndSort(array) {
-    let result = array.filter((value, index, arr) => {
-        return index === arr.indexOf(value)
+    let result = array.filter((element, index, arr) => {
+        return index === arr.indexOf(element)
     })
     result.sort();
     return result;
 }
 console.log(removeDuplicatesAndSort([6, 8, 1, 4, 1, 4]))
+
+console.clear();
+
+function palindrome(string) {
+    const reversedString = string.split('').reduce((reversed, character) => character + reversed, '');
+    return reversedString === string;
+}
+console.log(palindrome("hello"), palindrome("abcba"))
+
+console.clear();
+
+function reversedInteger(n) {
+    const reversed = n.toString().split('').reverse().join('');
+    return parseInt(reversed) * Math.sign(n);
+}
+console.log(reversedInteger(-400), reversedInteger(829), reversedInteger(15))
