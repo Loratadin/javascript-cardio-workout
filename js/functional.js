@@ -519,3 +519,40 @@ function reversedInteger(n) {
     return parseInt(reversed) * Math.sign(n);
 }
 console.log(reversedInteger(-400), reversedInteger(829), reversedInteger(15))
+
+console.clear();
+
+function maxCharacter(string) {
+    let characterMap = {};
+    for (let char of string) {
+        characterMap[char] = characterMap[char] + 1 || 1;
+    }
+    let max = 0;
+    let maxChar = ' ';
+    for (let char in characterMap) {
+        if (characterMap[char] > max) {
+            max = characterMap[char];
+            maxChar = char;
+        }
+    };
+    return maxChar;
+}
+console.log(maxCharacter("Hello there"))
+
+console.clear();
+
+//fizzbuzz; numbers from 1 to n
+function fizzbuzz(n) {
+    for (let i = 1; i <= n; i++){
+        if (i % 3 === 0  && i % 5 === 0) {
+            console.log("fizzbuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz")
+        } else {
+            console.log(i)
+    }
+}
+}
+console.log(fizzbuzz(15));
