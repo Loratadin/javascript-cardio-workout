@@ -556,3 +556,30 @@ function fizzbuzz(n) {
 }
 }
 console.log(fizzbuzz(15));
+
+console.clear();
+
+// function chunk(array, size) {
+//     let chunked = [];
+//     for (let element of array) {
+//         let last = chunked[chunked.lenght - 1];
+//         if (!last || last.length === size) {
+//             chunked.push([element]);
+//         } else {
+//             last.push(element);
+//         }
+//     }
+//     return chunked;
+// }
+// console.log(chunk([1, 2, 3, 4], 3))
+
+function chunk(array, size) {
+    const chunked = [];
+    let index = 0;
+    while (index < array.length) {
+        chunked.push(array.slice(index, index + size))
+        index += size;
+    }
+    return chunked;
+}
+console.log(chunk([1, 2, 3, 4], 3))
