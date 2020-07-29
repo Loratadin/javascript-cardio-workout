@@ -582,4 +582,39 @@ function chunk(array, size) {
     }
     return chunked;
 }
-console.log(chunk([1, 2, 3, 4], 3))
+console.log(chunk([1, 2, 3, 4], 3));
+
+console.clear();
+
+// function anagram(stringA, stringB) {
+//     const charMapA = characterMap(stringA);
+//     const charMapB = characterMap(stringB);
+//     console.log(charMapA, charMapB)
+//     if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
+//         return false;
+//     }
+//     for (let char in charMapA) {
+//         if (charMapA[char] !== charMapB[char]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// function characterMap(string) {
+//     let characterMap = {};
+//     for (let char of string.replace(/[^\w]/g, '').toLowerCase()) {
+//         characterMap[char] = characterMap[char] + 1 || 1;
+//     }
+//     return characterMap;
+// }
+
+function anagram(stringA, stringB) {
+    const modifiedA = modifyString(stringA);
+    const modifiedB = modifyString(stringB);
+    return modifiedA === modifiedB;
+}
+function modifyString(string) {
+    return string.replace(/[^\w]/g, '').toLowerCase().sort();
+}
+
+console.log(anagram("hello there", "Hellothere!"))
