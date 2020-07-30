@@ -614,7 +614,27 @@ function anagram(stringA, stringB) {
     return modifiedA === modifiedB;
 }
 function modifyString(string) {
-    return string.replace(/[^\w]/g, '').toLowerCase().sort();
+    return string.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
 
 console.log(anagram("hello there", "Hellothere!"))
+
+console.clear();
+
+function capitalize(string) {
+    // const words = [];
+    // for (let word of string.split(' ')) {
+    //     words.push(word[0].toUpperCase() + word.slice(1));
+    // }
+    // return words.join(' ');
+    let result = string[0].toUpperCase();
+    for (let i = 1; i < string.length; i++){
+        if (string[i - 1] === ' ') {
+            result += string[i].toUpperCase();
+        } else {
+            result += string[i];
+        }
+    }
+    return result;
+}
+console.log(capitalize("i need to finish this task tonight!"))
