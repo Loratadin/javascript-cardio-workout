@@ -689,3 +689,23 @@ function pyramid(n) {
     }
 }
 console.log(pyramid(7));
+
+console.clear();
+function firstMissingPositive(nums) {
+    const uniqueNums = nums.filter((value, index, array) => {
+        return index === array.indexOf(value)
+    })
+        .filter((num) => num > 0)
+        .sort((a, b) => a-b);
+    console.log(uniqueNums)
+    let missingPositive = 1;
+    for (let i = 0; i < uniqueNums.length; i++) {
+        if(uniqueNums[i] === missingPositive){
+            missingPositive += 1;
+        } else {
+            return missingPositive;
+        }
+    }
+    return missingPositive;
+};
+console.log(firstMissingPositive([-1,4,2,1,9,10]));
