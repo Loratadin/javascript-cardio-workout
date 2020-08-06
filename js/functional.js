@@ -724,3 +724,16 @@ function pyramid(n, row = 0, level = '') {
     pyramid(n, row, level + add);
 }
 console.log(pyramid(7));
+console.clear();
+
+class Queue {
+    constructor() {
+        this.data = [];
+    }
+    add(record) {
+        this.data.unshift(record);
+    }
+    remove() {
+        return this.data.pop();
+    }
+}
