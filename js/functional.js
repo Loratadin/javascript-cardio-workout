@@ -754,3 +754,19 @@ function weave(sourceOne, sourceTwo) {
     return q;
 }
 console.log(weave([1, 2, 3], ["Hi", "There", "You"]));
+
+console.clear();
+class Stack {
+    constructor() {
+        this.data = [];
+    }
+    push(record) {
+        this.data.push(record);
+    }
+    pop() {
+        return this.data.pop();
+    }
+    peek() {
+        return this.data[this.data.length - 1];
+    }
+}
