@@ -726,34 +726,34 @@ function pyramid(n, row = 0, level = '') {
 console.log(pyramid(7));
 console.clear();
 
-class Queue {
-    constructor() {
-        this.data = [];
-    }
-    add(record) {
-        this.data.unshift(record);
-    }
-    remove() {
-        return this.data.pop();
-    }
-    peek() {
-        return this.data[this.data.length - 1];
-    }
-}
+// class Queue {
+//     constructor() {
+//         this.data = [];
+//     }
+//     add(record) {
+//         this.data.unshift(record);
+//     }
+//     remove() {
+//         return this.data.pop();
+//     }
+//     peek() {
+//         return this.data[this.data.length - 1];
+//     }
+// }
 
-function weave(sourceOne, sourceTwo) {
-    const q = new Queue();
-    while (sourceOne.peek() || sourceTwo.peek()) {
-        if (sourceOne.peek()) {
-            q.add(sourceOne.remove());
-        }
-        if (sourceTwo.peek()) {
-            q.add(sourceTwo.remove());
-        }
-    }
-    return q;
-}
-console.log(weave([1, 2, 3], ["Hi", "There", "You"]));
+// function weave(sourceOne, sourceTwo) {
+//     const q = new Queue();
+//     while (sourceOne.peek() || sourceTwo.peek()) {
+//         if (sourceOne.peek()) {
+//             q.add(sourceOne.remove());
+//         }
+//         if (sourceTwo.peek()) {
+//             q.add(sourceTwo.remove());
+//         }
+//     }
+//     return q;
+// }
+// console.log(weave([1, 2, 3], ["Hi", "There", "You"]));
 
 console.clear();
 class Stack {
@@ -768,5 +768,25 @@ class Stack {
     }
     peek() {
         return this.data[this.data.length - 1];
+    }
+}
+class Queue {
+    constructor() {
+        this.first = new Stack();
+        this.second = new Stack();
+    }
+    add(record) {
+        this.first.push(record);
+    }
+    remove() {
+        while (this.first.peek()) {
+            const record = this.first.pop();
+            this.second.push(record);
+        }
+        const target = this.second.pop();
+        while (this.second.peek()) {
+            this.first.push(target);
+        }
+        return record;
     }
 }
