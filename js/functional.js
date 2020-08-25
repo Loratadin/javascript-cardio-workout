@@ -813,10 +813,12 @@ class LinkedList  {
     constructor() {
         this.head = null;
     }
+
     insertFirst(data) {
         const node = new Node(data, this.head);
         this.head = node;
     }
+
     size() {
         let counter = 0;
         let node = this.head;
@@ -826,5 +828,33 @@ class LinkedList  {
             node = node.next;
         }
         return counter;
+    }
+
+    getFirst() {
+        return this.head;
+    }
+
+    getLast() {
+        if (!this.head) {
+            return null;
+        }
+        let node = this.head;
+        while (node) {
+            node = node.next;
+            if (!node.next) {
+                return node;
+            }
+        }
+    }
+
+    clear() {
+        this.head = null;
+    }
+
+    removeFirst() {
+        if (!this.head) {
+            return;
+        }
+        this.head = this.head.next;
     }
 }
