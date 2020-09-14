@@ -1063,7 +1063,12 @@ descendingOrder = (a, b) => {
     if (a > b) return -1;
     return 0;
 }
-console.log(targetNames.filter(isName).map(changeCase).sort(descendingOrder));
+sortByLastName = (a, b) => {
+    if (a.split(/\W+/)[1] > b.split(/\W+/)[1]) return 1;
+    if (a.split(/\W+/)[1] < b.split(/\W+/)[1]) return -1;
+    return 0;
+}
+console.log(targetNames.filter(isName).map(changeCase).sort(sortByLastName));
 
 const commodities = [
     { name: "apple", category: "fruit", quantity: 100 },
