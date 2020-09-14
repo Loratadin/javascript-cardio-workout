@@ -962,21 +962,21 @@ function fromLast(list, n) {
     }
     return slow;
 }
-class Node {
-    constructor(data) {
-        this.data = data;
-        this.children = [];
-    }
-    add(data) {
-        const node = new Node(data);
-        this.children.push(node);
-    }
-    remove(data) {
-        this.children.filter(node => {
-            return node.data !== data;
-        })
-    }
-}
+// class Node {
+//     constructor(data) {
+//         this.data = data;
+//         this.children = [];
+//     }
+//     add(data) {
+//         const node = new Node(data);
+//         this.children.push(node);
+//     }
+//     remove(data) {
+//         this.children.filter(node => {
+//             return node.data !== data;
+//         })
+//     }
+// }
 
 class Tree {
     constructor() {
@@ -1017,32 +1017,65 @@ function levelWidth(root) {
 }
 
 // insert nodes in binary search tree
-class Node {
-    constructor(data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-    insert(data) {
-        if (data < this.data && this.left) {
-            this.left.insert(data);
-        } else if (data < this.data) {
-            this.left = new Node(data);
-        } else if (data > this.data && this.right) {
-            this.right.insert(data);
-        } else if (data > this.data) {
-            this.right = new Node(data);
-        }
-    }
-    contains(data) {
-        if (this.data === data) {
-            return this;
-        }
-        if (this.data < data && this.right) {
-            return this.right.contains(data);
-        } else if (this.data > data && this.left) {
-            return this.left.contains(data);
-        }
-        return null;
-    }
+// class Node {
+//     constructor(data) {
+//         this.data = data;
+//         this.left = null;
+//         this.right = null;
+//     }
+//     insert(data) {
+//         if (data < this.data && this.left) {
+//             this.left.insert(data);
+//         } else if (data < this.data) {
+//             this.left = new Node(data);
+//         } else if (data > this.data && this.right) {
+//             this.right.insert(data);
+//         } else if (data > this.data) {
+//             this.right = new Node(data);
+//         }
+//     }
+//     contains(data) {
+//         if (this.data === data) {
+//             return this;
+//         }
+//         if (this.data < data && this.right) {
+//             return this.right.contains(data);
+//         } else if (this.data > data && this.left) {
+//             return this.left.contains(data);
+//         }
+//         return null;
+//     }
+// }
+console.clear();
+
+const targetNames = ["Luka Doncic", "", undefined, 10, "james Harden", "jAmes hArden", "james harden jr", "lebron jAmes"];
+isName = (name) => {
+    return name && name.length > 0
+}
+changeCase = (name) => {
+    return name.toLowerCase();
+}
+workNames = (names) => {
+    names.filter(n => n && (n.length > 0));
+}
+descendingOrder = (a, b) => {
+    if (a < b) return 1;
+    if (a > b) return -1;
+    return 0;
+}
+console.log(targetNames.filter(isName).map(changeCase).sort(descendingOrder));
+
+const commodities = [
+    { name: "apple", category: "fruit", quantity: 100 },
+    { name: "carrot", category: "vegetable", quantity: 10 },
+    { name: "beans", category: "vegetable", quantity: 10 },
+    { name: "okra", category: "vegetable", quantity: 100 },
+    { name: "bananas", category: "fruit", quantity: 1 },
+    { name: "yam", category: "fruit" },
+];
+
+function sortedPeople(a, b) {
+    if (a > b) return 1;
+    else if (a < b) return -1;
+    else return 0;
 }
