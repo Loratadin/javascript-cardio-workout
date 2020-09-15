@@ -1098,3 +1098,22 @@ const groupedIntoPages = commodities.reduce((resultArray, item, index) => {
 }, [])
 
 console.log(groupedIntoPages);
+
+console.clear();
+
+function countRepeatingLettersInString(s) {
+    let compressedString = [];
+    let tempoparyArray = s.split("");
+    let counter = 1;
+    for (let i = 0; i < tempoparyArray.length; i++) {
+        if (tempoparyArray[i] === tempoparyArray[i+1]) {
+            counter++;
+        } else {
+            let value = `${counter}${tempoparyArray[i]}`;
+            compressedString = [...compressedString, value];
+            counter = 1;
+        }
+    }
+    return compressedString.join("");
+}
+console.log(compressString("aabbccc"))
