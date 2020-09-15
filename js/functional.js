@@ -1078,6 +1078,23 @@ const commodities = [
     { name: "bananas", category: "fruit", quantity: 1 },
     { name: "yam", category: "fruit" },
 ];
+
 console.clear();
 console.log(commodities.filter(c => c.category === "vegetable"));
 console.log(commodities.filter(c => c.name.match(/app/)));
+
+console.clear();
+const perChunk = 3;
+const groupedIntoPages = commodities.reduce((resultArray, item, index) => {
+  const chunkIndex = Math.floor(index/perChunk)
+
+  if(!resultArray[chunkIndex]) {
+    resultArray[chunkIndex] = [] // start a new chunk
+  }
+
+  resultArray[chunkIndex].push(item)
+
+    return resultArray;
+}, [])
+
+console.log(groupedIntoPages);
