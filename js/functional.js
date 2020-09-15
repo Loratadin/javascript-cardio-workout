@@ -1116,4 +1116,17 @@ function countRepeatingLettersInString(s) {
     }
     return compressedString.join("");
 }
-console.log(compressString("aabbccc"))
+console.log(countRepeatingLettersInString("aabbccc"));
+console.clear();
+
+function removeDuplicates(array) {
+    let cleanArray = [];
+    let arrayLength = array.length;
+    for (let i = 0; i < arrayLength; i++){
+        if (cleanArray.indexOf(array[i]) === -1) {
+            cleanArray.push(array[i]);
+        }
+    }
+    return cleanArray;
+}
+console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 5, 6]))
