@@ -1129,4 +1129,10 @@ function removeDuplicates(array) {
     }
     return cleanArray;
 }
-console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 5, 6]))
+console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 5, 6]));
+
+console.clear();
+function splitStringInNSizeChunks(string, n) {
+    return string.match(new RegExp('.{1,' + n + '}', 'g'));
+}
+console.log(splitStringInNSizeChunks("abcdefg", 2));
