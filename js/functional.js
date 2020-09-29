@@ -1136,3 +1136,15 @@ function splitStringInNSizeChunks(string, n) {
     return string.match(new RegExp('.{1,' + n + '}', 'g'));
 }
 console.log(splitStringInNSizeChunks("abcdefg", 2));
+console.clear();
+function chunkStringInNSizeChunks(string, n) {
+    const size = Math.ceil(string.length / n);
+    const chunks = Array(size);
+    let offset = 0;
+    for (i = 0; i < size; i++){
+        chunks[i] = string.substr(offset, n);
+        offset += n;
+    }
+    return chunks;
+};
+console.log(chunkStringInNSizeChunks("abcdefg", 2));
