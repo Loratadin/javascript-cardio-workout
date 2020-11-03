@@ -1148,3 +1148,56 @@ function chunkStringInNSizeChunks(string, n) {
     return chunks;
 };
 console.log(chunkStringInNSizeChunks("abcdefg", 2));
+
+console.clear()
+//find all Honda vehicles with 80,000 miles maximum.
+//update all 2015 vehicles with a new property "lastUpdate" and set it to today's date.
+//sort all vehicles by year descending
+const vehicles = [
+    {
+      year: 2015,
+      make: "Honda",
+      model: "Accord",
+      color: "white",
+      mileage: 100000,
+    },
+    {
+      year: 2015,
+      make: "Toyota",
+      model: "Corolla",
+      color: "white",
+      mileage: 100000,
+    },
+    {
+      year: 2019,
+      make: "Toyota",
+      model: "Corolla",
+      color: "red",
+      mileage: 30000,
+    },
+    {
+      year: 2018,
+      make: "Honda",
+      model: "Civic",
+      color: "silver",
+      mileage: 20000,
+    },
+    {
+      year: 2017,
+      make: "Honda",
+      model: "Accord",
+      color: "black",
+      mileage: 60000,
+    },
+];
+
+const sortedVehicles = vehicles.sort((a, b) => a.year < b.year ? 1 : -1);
+const today = new Date();
+const updatedVehicles = vehicles.map(vehicle => {
+    if (vehicle.year === 2015) {
+        vehicle.lastUpdate = today.toString();
+    }
+    return vehicle;
+});
+const targetVehicles = vehicles.filter(v => v.make === "Honda" && v.mileage <= 80000)
+console.log("supdatedVehicles", targetVehicles);
