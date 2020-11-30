@@ -1200,4 +1200,17 @@ const updatedVehicles = vehicles.map(vehicle => {
     return vehicle;
 });
 const targetVehicles = vehicles.filter(v => v.make === "Honda" && v.mileage <= 80000)
-console.log("supdatedVehicles", targetVehicles);
+
+console.clear();
+function isWindowsMacOrLinux() {
+    let result = false;
+    const targetWords = ["Win", "Mac", "Linux"];
+    targetWords.forEach(word => {
+        console.log("result", word, navigator.userAgent.includes(word));
+        if (navigator.userAgent.includes(word)) {
+            result = true
+        }
+    })
+    return result;
+}
+console.log("isWindowsMacOrLinux", isWindowsMacOrLinux())
