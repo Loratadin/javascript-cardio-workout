@@ -1214,3 +1214,17 @@ function isWindowsMacOrLinux() {
     return result;
 }
 console.log("isWindowsMacOrLinux", isWindowsMacOrLinux())
+console.clear();
+
+const sortingDirection = {
+	Ascending: "ASC",
+	Descending: "DESC",
+};
+function getSortedArray(items, propertyName, direction = sortingDirection.Ascending) {
+	let arrayToReturn = [...items].sort((a, b) => a[propertyName] - b[propertyName]);
+	if(direction !== sortingDirection.Ascending) {
+		arrayToReturn.reverse();
+	}
+    return arrayToReturn;
+}
+console.log("getSortedArray", getSortedArray(inventors, "year", sortingDirection.Descending))
