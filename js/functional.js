@@ -1220,8 +1220,15 @@ const sortingDirection = {
 	Ascending: "ASC",
 	Descending: "DESC",
 };
+// function getSortedArray(items, propertyName, direction = sortingDirection.Ascending) {
+// 	let arrayToReturn = [...items].sort((a, b) => a[propertyName] - b[propertyName]);
+// 	if(direction !== sortingDirection.Ascending) {
+// 		arrayToReturn.reverse();
+// 	}
+//     return arrayToReturn;
+// }
 function getSortedArray(items, propertyName, direction = sortingDirection.Ascending) {
-	let arrayToReturn = [...items].sort((a, b) => a[propertyName] - b[propertyName]);
+	let arrayToReturn = [...items].sort((a, b) => a[propertyName] < b[propertyName] ? 1 : -1);
 	if(direction !== sortingDirection.Ascending) {
 		arrayToReturn.reverse();
 	}
